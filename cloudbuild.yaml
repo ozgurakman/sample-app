@@ -1,6 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/go'
-  args: ['build', '-o', 'main', 'main.go']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'europe-west4-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0', '.']
 - name: 'gcr.io/cloud-builders/docker'
@@ -10,7 +8,7 @@ steps:
   - 'set'
   - 'image'
   - 'deployment/production-deployment'
-  - 'production-deployment=europe-west4-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0'
+  - 'hello-app=europe-west4-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0'
   - '--namespace=prod'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-a'
