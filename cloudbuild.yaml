@@ -23,4 +23,4 @@ steps:
     - 'CLOUDSDK_COMPUTE_REGION=europe-west4-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
 options:
- logging: CLOUD_LOGGING_ONLY
+ logging: CLOUD_LOGGING_ONLY# trigger-build-1776849858
